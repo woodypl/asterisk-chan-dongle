@@ -443,7 +443,7 @@ static void* do_monitor_phone (void* data)
 			if(ecmd)
 			{
 				ast_log (LOG_ERROR, "[%s] timedout while waiting '%s' in response to '%s'\n", dev, at_res2str (ecmd->res), at_cmd2str (ecmd->cmd));
-				goto e_cleanup;
+				//goto e_cleanup;
 			}
 			at_enque_ping(&pvt->sys_chan);
 			ast_mutex_unlock (&pvt->lock);
